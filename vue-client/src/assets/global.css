@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 전체 기본 폰트 */
+body {
+    font-family: 'SUITE-Regular', sans-serif !important;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'PuradakGentleGothicR', sans-serif !important;
+    font-weight: normal;
+    color: #222;
+  }
+  
+  
+  /* 버튼 스타일 */
+  button {
+    font-family: 'SUITE-Regular', sans-serif;
+    font-weight: 600;
+  }
+  
+  /* 링크 스타일 */
+  a {
+    font-family: 'SUITE-Regular', sans-serif;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
