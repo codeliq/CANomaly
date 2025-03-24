@@ -1,5 +1,4 @@
 <script setup>
-<<<<<<< HEAD
 import { RouterView } from "vue-router";
 import NavBar from "@/components/NavBar.vue"; // ✅ 네비게이션 바 컴포넌트 추가
 import "@/assets/global.css";
@@ -27,24 +26,3 @@ import "@/assets/global.css";
   background: #f4f4f4;
 }
 </style>
-=======
-import { RouterLink, RouterView } from "vue-router";
-</script>
-
-<template>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <RouterLink to="/">Home</RouterLink>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <RouterView />
-</template>
-
-<style scoped>
-</style>
->>>>>>> fa169f129417fdbd1784573ea6bb7f7d6b1f2bb6

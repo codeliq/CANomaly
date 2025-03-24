@@ -4,10 +4,9 @@ import { WebSocketServer } from "ws";
 import net from "net";
 import pool from "./db/db.js"; // MySQL 연결
 import cors from "cors";
-<<<<<<< HEAD
 import mysql from "mysql2/promise"; // ✅ MySQL 연결을 위한 promise 지원 모듈
-=======
->>>>>>> fa169f129417fdbd1784573ea6bb7f7d6b1f2bb6
+import fetch from "node-fetch";
+
 
 const app = express();
 const WEB_PORT = 8000;
@@ -19,13 +18,10 @@ const wss = new WebSocketServer({ server });
 let tcpClients = [];
 let wsClients = [];
 
-<<<<<<< HEAD
 // ✅ CORS 및 JSON 파싱 미들웨어 설정
 app.use(cors());
 app.use(express.json());
 
-=======
->>>>>>> fa169f129417fdbd1784573ea6bb7f7d6b1f2bb6
 // 🚀 서버 시작 시 테이블 초기화
 async function resetDatabase() {
   try {
@@ -85,7 +81,6 @@ wss.on("connection", (ws) => {
   });
 });
 
-<<<<<<< HEAD
 // 🔍 모든 공격 로그 조회 API (페이징 추가 가능)
 app.get("/api/all_attack_logs", async (req, res) => {
   try {
@@ -114,8 +109,10 @@ app.post("/api/notify", async (req, res) => {
     res.send("알림 전송 완료");
   } catch (error) {
     console.error("🚨 라즈베리파이 알림 전송 실패:", error);
-=======
-app.use(cors());
+    res.status(500).send("서버 오류 발생");
+  }
+});
+
 
 // 공격 로그 조회 API
 app.get("/api/attack_logs", async (req, res) => {
@@ -133,7 +130,6 @@ app.get("/api/attack_logs", async (req, res) => {
     res.json(rows);
   } catch (error) {
     console.error("🚨 공격 로그 검색 오류:", error);
->>>>>>> fa169f129417fdbd1784573ea6bb7f7d6b1f2bb6
     res.status(500).send("서버 오류 발생");
   }
 });
