@@ -12,7 +12,7 @@ def generate_can_packet():
     # 정상 패킷이 50% 확률로 나오도록 조정
     attack_type = random.choices(
         ["normal", "flooding", "spoofing", "fuzzing"],
-        weights=[45, 20, 20, 15],  
+        weights=[40, 20, 20, 20],  
         k=1
     )[0]
 

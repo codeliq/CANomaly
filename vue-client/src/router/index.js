@@ -3,13 +3,16 @@ import HomeView from "@/views/HomeView.vue";
 import DashboardView from "@/views/DashboardView.vue";
 import LogsView from "@/views/LogsView.vue";
 import SettingsView from "@/views/SettingsView.vue";
+import NotificationView from '../views/NotificationView.vue';
 
 const routes = [
-  { path: "/", component: HomeView },
-  { path: "/dashboard", component: DashboardView },
-  { path: "/logs", component: LogsView },
-  { path: "/settings", component: SettingsView },
-];
+  { path: '/', name: 'Home', component: HomeView },
+  { path: '/dashboard', name: 'Dashboard', component: DashboardView },
+  { path: '/logs', name: 'Logs', component: LogsView },
+  { path: '/settings', name: 'Settings', component: SettingsView },
+  { path: '/notifications', name: 'Notifications', component: NotificationView },  // ✅ 추가
+]
+
 
 const router = createRouter({
   history: createWebHistory(),

@@ -106,7 +106,7 @@ app.post("/api/notify", async (req, res) => {
     });
 
     console.log(`🔔 라즈베리파이에 ${attack_type} 알림 전송됨`);
-    res.send("알림 전송 완료");
+    res.json({ status: "success", message: "알림 전송 완료" });
   } catch (error) {
     console.error("🚨 라즈베리파이 알림 전송 실패:", error);
     res.status(500).send("서버 오류 발생");

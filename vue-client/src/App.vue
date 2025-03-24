@@ -1,4 +1,5 @@
 <script setup>
+
 import { RouterView } from "vue-router";
 import NavBar from "@/components/NavBar.vue"; // ✅ 네비게이션 바 컴포넌트 추가
 import "@/assets/global.css";
